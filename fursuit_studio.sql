@@ -1,0 +1,11 @@
+-- Active: 1736786939860@@127.0.0.1@3306@fursuit_studio
+CREATE DATABASE IF NOT EXISTS fursuit_studio;
+
+USE fursuit_studio;
+
+CREATE TABLE IF NOT EXISTS users(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    Account VARCHAR(255) NOT NULL,
+    Username VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL
+);
