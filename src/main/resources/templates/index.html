@@ -1,113 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ch">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:text="${studioName}">兽装工作室</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <title>主页</title>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#" th:text="${studioName}">兽装工作室</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">首页</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">作品展示</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">服务项目</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">关于我们</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">联系方式</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 主横幅 -->
-    <header class="hero-section">
-        <div class="container text-center py-5">
-            <h1 th:text="${studioName}">XX兽装工作室</h1>
-            <p class="lead" th:text="${slogan}">为您打造独一无二的兽装形象</p>
-            <a href="#contact" class="btn btn-primary btn-lg mt-3">立即咨询</a>
-        </div>
-    </header>
-
-    <!-- 特色作品 -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">特色作品展示</h2>
-            <div class="row">
-                <div th:each="suit : ${featuredSuits}" class="col-md-4 mb-4">
-                    <div class="card">
-                        <img th:src="@{/images/suits/__${suit}__.jpg}" 
-                             th:alt="${suit}" 
-                             class="card-img-top" 
-                             src="https://via.placeholder.com/300x200?text=Fursuit+Sample">
-                        <div class="card-body">
-                            <h5 class="card-title" th:text="${suit}">兽装名称</h5>
-                            <p class="card-text">精心手工制作，使用高质量材料，舒适耐用。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 服务项目 -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">我们的服务</h2>
-            <div class="row">
-                <div th:each="service : ${services}" class="col-md-3 mb-4">
-                    <div class="service-item text-center p-4">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-paw fa-3x"></i>
-                        </div>
-                        <h4 th:text="${service}">服务名称</h4>
-                        <p>专业团队为您提供优质服务</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 th:text="${studioName}">梦幻兽装工作室</h5>
-                    <p>专业兽装设计与制作团队，为您打造独特的兽人形象。</p>
-                </div>
-                <div class="col-md-3">
-                    <h5>快速链接</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">首页</a></li>
-                        <li><a href="#" class="text-white">作品展示</a></li>
-                        <li><a href="#" class="text-white">定制流程</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>联系我们</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope me-2"></i> contact@fursuitstudio.com</li>
-                        <li><i class="fas fa-phone me-2"></i> +86 123-4567-8910</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-0">&copy; 2023 <span th:text="${studioName}">梦幻兽装工作室</span>. 版权所有.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- 脚本 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <h1>Spring Boot Page!</h1>
+    <p th:text="${title}"></p>
 </body>
 </html>

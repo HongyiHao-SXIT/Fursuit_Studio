@@ -1,10 +1,10 @@
-package com.fursuit_studio;
+package com.cmind;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FursuitStudioApplicationTests {
+class CmindApplicationTests {
 
 	@Test
 	void contextLoads() {
